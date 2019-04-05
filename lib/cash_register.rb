@@ -1,11 +1,11 @@
 class CashRegister 
   
-  attr_accessor :total, :discount, :old_total, :items
+  attr_accessor :total, :discount, :old_total, :items_array
   
   def initialize(discount=0)
     @total = 0
     @discount = discount
-    @items = []
+    @items_array = []
   end
   
   def add_item(title, price, quantity=1)
@@ -14,11 +14,11 @@ class CashRegister
    product[price] = price
    product[quantity] = quantity
    @total += price * quantity
-   @items << product
+   @items_array << product
 
 def items
    items_total = []
-   @items.map do |product|
+   @items_array.map do |product|
      for num in 1..product[:quantity] 
      items_total << product[:title]
    end 
