@@ -22,7 +22,6 @@ def items
      for num in 1..product[:quantity] 
      items_total << product[:name]
    end 
- end
  items_total
   end  
   
