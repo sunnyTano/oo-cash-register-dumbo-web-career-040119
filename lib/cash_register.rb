@@ -14,9 +14,15 @@ class CashRegister
    product[price] = price
    product[quantity] = quantity
    @total += price * quantity
-   @items << product
+
+   items_total = []
+   product.map do |item|
+     for num in item 
+     items_total << item
+   end 
   end  
   
   def apply_discount
+  end 
   
 end
