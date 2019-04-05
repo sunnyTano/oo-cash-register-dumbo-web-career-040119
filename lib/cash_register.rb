@@ -14,10 +14,11 @@ class CashRegister
    product[price] = price
    product[quantity] = quantity
    @total += price * quantity
+   @items << product
 
 def items
    items_total = []
-   product.map do |product|
+   @items.map do |product|
      for num in 1..product[:quantity] 
      items_total << product[:name]
    end 
