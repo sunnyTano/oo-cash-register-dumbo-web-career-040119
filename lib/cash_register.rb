@@ -25,7 +25,7 @@ def items
  items_total
   end  
   
-  def apply_discount
-  end 
+  # def apply_discount
+  # end 
   
 end
