@@ -17,10 +17,12 @@ class CashRegister
 
 def items
    items_total = []
-   product.map do |item|
+   product.map do |product|
      for num in 1..product[:quantity] 
-     items_total << item
+     items_total << product[:name]
    end 
+ end
+ items_total
   end  
   
   def apply_discount
