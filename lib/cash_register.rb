@@ -18,7 +18,7 @@ class CashRegister
 
 def items
    items_total = []
-   @items_array.map do |product|
+   @items_array.each do |product|
      for num in 1..product[:quantity] 
      items_total << product[:title]
    end 
