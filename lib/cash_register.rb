@@ -14,7 +14,7 @@ class CashRegister
    product[price] = price
    product[quantity] = quantity
    @total += price * quantity
-   @items << quantity
+   @items << product
   end  
   
   
